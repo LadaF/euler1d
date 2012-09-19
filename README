@@ -1,0 +1,46 @@
+Euler1D computes euler equations for ideal compressible gas in one dimension.
+Initial conditions are discontinuous in the form of Riemann problem or smooth
+and periodic in the form of sinusoidal wave.
+
+All settings are stored in the file euler.conf. All options are commented.
+Files anim.plot and animate.sh are sample Gnuplot and shell scripts for
+generation of animations. Currently it produces mp4 files using ffmpeg. You
+can change it to anything else.
+
+Outputs of computations are stored in files rho.txt, u.txt, rhou.txt,
+ e.txt, p.txt, m.txt (density, velocity, density*velocity, total energy,
+ pressure, Mach number).
+
+I would appreciate your feedback. You can contact me at 
+ vladimir.fuka(at)gmail.com.
+
+            Vladimir Fuka
+
+Info for version 1.01: Some new options added by Donato Cecere donato.cecere(at)gmail.com.
+	    
+
+For used methods and algorithms see following references:
+
+Very good introduction to central and MUSTA methods:
+T. R. Hagen, M. O. Henriksen, J. M. Hjelmervik, and K.-A. Lie. How to solve
+systems of conservation laws numerically using the graphics processor as a
+high-performance computational engine. In "Geometrical Modeling, Numerical Simulation and Optimization: Industrial Mathematics at SINTEF", Eds., G. Hasle, K.-A. Lie, and E. Quak, Springer Verlag, to appear. 
+WWW: http://heim.iﬁ.uio.no/˜kalie/papers/conslaws-GPU.pdf.
+
+Kurganov-Tadmor method:
+Kurganov, A., & Tadmor, E. 2000. New High-Resolution Central Schemes for
+Nonlinear Conservation Laws and Convection-Diﬀusion Equations.
+J. Comput. Phys., 160, 241–282.
+WWW: http://www.cscamm.umd.edu/centpack/publications/ﬁles/KT_semi-discrete.JCP00-centpack.pdf.
+	    
+Central-upwind method:
+Kurganov, A., Noelle, S., & Petrova, G. 2001. Semidiscrete Central-
+Upwind Schemes for Hyperbolic Conservation Laws and Hamilton-
+Jacobi Equations. SIAM J. Sci. Comput., 23, 707–740.
+WWW: http://www.cscamm.umd.edu/centpack/publications/ﬁles/Kur-Noe-Ptr_semidiscrete_CU_SISC2001-centpack.pdf.
+
+MUSTA method:
+
+V A Titarev and Toro E F. Finite Volume WENO Schemes for Three-Dimensional
+Conservation Laws. J. Computational Physics, Vol. 201, pp 238-260, 2004.
+WWW: www.newton.cam.ac.uk/preprints/NI03057.pdf (preprint)

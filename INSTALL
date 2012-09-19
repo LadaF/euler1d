@@ -1,0 +1,16 @@
+Program can be compiled by any Fortran 95 compiler. For GNU Fortran you can use
+
+gfortran -O2 CUeuler.f90 euler1d.f90 -o euler1d
+
+For other options try gfortran --help. If you use other compiler, simply type
+it's name (f90,ifort ...) instead of gfortran.
+
+Compiled exeutable eueler1d copy to any directory with files euler.conf,
+animate.sh and anim.plot. If you want to produce animations using my scripts,
+you must have installed Gnuplot and FFmpeg. Also for other initial conditions,
+you will probably have to edit file anim.plot and change xrange and yrange
+according to your computed data. Then simply run script ./animate.sh. Gnuplot
+will then create jpg files for frames and then FFmpeg resulting mp4 file.
+
+! Remark: program does compile succesfuly on gfortran 4.0.2 (SuSE 10.0), but
+does not run correctly. With recent versions of GCC this should be fixed.
